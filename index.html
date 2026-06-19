@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Calculator</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+
+  <!-- Animated Decorative Background Orbs -->
+  <div class="orbs-container" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <div class="app-container">
+    <!-- Header Control Bar -->
+    <header class="top-controls animate-init-stagger" style="--anim-order: 1">
+      <div class="header-clock-spacer"></div>
+
+      <div class="header-clock-date">
+        <span id="digital-clock" class="digital-clock">00:00:00</span>
+        <span id="current-date" class="current-date">Mon, Jan 01</span>
+      </div>
+      
+      <div class="controls-group">
+        <!-- Light/Dark Mode Switcher -->
+        <button id="theme-toggle" class="control-btn" aria-label="Toggle color theme" title="Switch Theme">
+          <!-- Light (Sun) Icon -->
+          <svg id="sun-icon" class="icon hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <!-- Dark (Moon) Icon -->
+          <svg id="moon-icon" class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Card Body -->
+    <main class="calculator-card animate-init-stagger" id="calculator-card" style="--anim-order: 2">
+      <!-- Glass reflection sheen line -->
+      <div class="glass-reflection-shine" aria-hidden="true"></div>
+      
+      <!-- Premium Glass Display Block -->
+      <section class="display-container" aria-label="Calculator Outputs">
+        <!-- Live Expression Window -->
+        <div class="expression-wrapper">
+          <span id="expression-display" class="expression-display" aria-live="polite"></span>
+        </div>
+        
+        <!-- Live Result Indicator -->
+        <div class="result-wrapper">
+          <span id="preview-display" class="preview-display" aria-live="off"></span>
+          <div class="main-output-row">
+            <span id="main-display" class="main-display">0</span>
+            <!-- Clipboard Copy Mechanism -->
+            <button id="copy-btn" class="copy-btn" aria-label="Copy display value" title="Copy Result">
+              <svg id="copy-default-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <svg id="copy-success-icon" class="hidden" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span id="copy-tooltip" class="copy-tooltip" role="status">Copied!</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tactical High-Contrast Buttons Area -->
+      <section class="keyboard-grid scientific" aria-label="Mathematical Operations Keyboard">
+        <!-- Row 1: Scientific Functions -->
+        <button class="key key-sci" data-key="sin">sin</button>
+        <button class="key key-sci" data-key="cos">cos</button>
+        <button class="key key-sci" data-key="tan">tan</button>
+        <button class="key key-sci" data-key="^">^</button>
+        <button class="key key-sci" data-key="√">√</button>
+
+        <!-- Row 2 -->
+        <button class="key key-action" id="key-ac" data-key="AllClear">AC</button>
+        <button class="key key-action" id="key-del" data-key="Backspace" aria-label="Backspace">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"></path><line x1="18" y1="9" x2="12" y2="15"></line><line x1="12" y1="9" x2="18" y2="15"></line></svg>
+        </button>
+        <button class="key key-sci" data-key="(">(</button>
+        <button class="key key-sci" data-key=")">)</button>
+        <button class="key key-op key-accent" data-key="÷" aria-label="Divide">÷</button>
+
+        <!-- Row 3 -->
+        <button class="key key-num" data-key="7">7</button>
+        <button class="key key-num" data-key="8">8</button>
+        <button class="key key-num" data-key="9">9</button>
+        <button class="key key-sci" data-key="π">π</button>
+        <button class="key key-op key-accent" data-key="×" aria-label="Multiply">×</button>
+
+        <!-- Row 4 -->
+        <button class="key key-num" data-key="4">4</button>
+        <button class="key key-num" data-key="5">5</button>
+        <button class="key key-num" data-key="6">6</button>
+        <button class="key key-sci" data-key="e">e</button>
+        <button class="key key-op key-accent" data-key="-" aria-label="Subtract">-</button>
+
+        <!-- Row 5 -->
+        <button class="key key-num" data-key="1">1</button>
+        <button class="key key-num" data-key="2">2</button>
+        <button class="key key-num" data-key="3">3</button>
+        <button class="key key-op" data-key="%">%</button>
+        <button class="key key-op key-accent" data-key="+" aria-label="Add">+</button>
+
+        <!-- Row 6 -->
+        <button class="key key-num" data-key="0">0</button>
+        <button class="key key-num" data-key=".">.</button>
+        <button class="key key-sci" data-key="ln">ln</button>
+        <button class="key key-sci" data-key="log">log</button>
+        <button class="key key-equal" id="key-equal" data-key="=" aria-label="Evaluate">=</button>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="./script.js" type="module"></script>
+</body>
+</html>
