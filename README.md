@@ -152,11 +152,7 @@ https://codealpha-calculator-website.vercel.app/
 
 ---
 
-## 🙏 Acknowledgement
 
-Special thanks to **CodeAlpha** for providing this internship opportunity and helping students gain practical experience in Frontend Development.
-
----
 
 <div align="center">
 
