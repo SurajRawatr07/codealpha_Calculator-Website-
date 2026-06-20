@@ -1,16 +1,15 @@
-````md
-# 🧮 Calculator Website Using JavaScript
+# 🧮 Calculator Using JavaScript
 
 <div align="center">
 
-![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge\&logo=html5\&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge\&logo=css3\&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge\&logo=javascript\&logoColor=black)
 ![CodeAlpha](https://img.shields.io/badge/CodeAlpha-Internship-blue?style=for-the-badge)
 
 ### 🖩 Modern Responsive Calculator
 
-A feature-rich Calculator built using **HTML, CSS, and JavaScript** with a clean user interface, responsive design, and smooth calculations.
+A feature-rich Calculator built using **HTML, CSS, and JavaScript** with interactive controls, responsive design, and a modern user interface.
 
 🔗 **Live Demo:** https://codealpha-calculator-website.vercel.app/
 
@@ -20,40 +19,36 @@ A feature-rich Calculator built using **HTML, CSS, and JavaScript** with a clean
 
 ## ✨ Features
 
-- ➕ Addition
-- ➖ Subtraction
-- ✖️ Multiplication
-- ➗ Division
-- 🧹 Clear Screen Function
-- ⌫ Delete Last Digit
-- 🖥️ Interactive Display Screen
-- ⚡ Instant Calculations
-- 📱 Fully Responsive Design
-- 🎨 Modern User Interface
-- 🚀 Fast Performance
+* ➕ Addition
+* ➖ Subtraction
+* ✖️ Multiplication
+* ➗ Division
+* 🧹 Clear Screen
+* ⌫ Delete Last Digit
+* 📊 Real-Time Calculations
+* ⚡ Fast Performance
+* 📱 Fully Responsive Design
+* 🎨 Attractive User Interface
+* 🚀 Smooth User Experience
 
 ---
 
 ## 🛠️ Built With
 
-- HTML5
-- CSS3
-- JavaScript (ES6)
+* HTML5
+* CSS3
+* JavaScript (ES6)
 
 ---
 
 ## 📂 Project Structure
 
-```bash
-Calculator-Website/
+```bash id="ofp5ih"
+Calculator/
 │
 ├── index.html
 ├── style.css
 ├── script.js
-│
-├── assets/
-│   ├── images/
-│   └── icons/
 │
 └── README.md
 ```
@@ -62,21 +57,21 @@ Calculator-Website/
 
 ### Clone Repository
 
-```bash
-git clone https://github.com/your-username/calculator-website.git
+```bash id="v2gl9d"
+git clone https://github.com/your-username/calculator.git
 ```
 
 ### Open Project
 
-```bash
-cd calculator-website
+```bash id="1ij5t6"
+cd calculator
 ```
 
 ### Run
 
 Simply open:
 
-```bash
+```bash id="cuzv7p"
 index.html
 ```
 
@@ -88,12 +83,12 @@ in your browser.
 
 Through this project, I learned:
 
-- DOM Manipulation
-- JavaScript Event Handling
-- Mathematical Operations Handling
-- Responsive Web Design
-- UI/UX Development
-- Interactive User Interface Design
+* DOM Manipulation
+* JavaScript Event Handling
+* Mathematical Operations
+* Responsive Web Design
+* UI/UX Development
+* Interactive Calculator Logic
 
 ---
 
@@ -105,7 +100,7 @@ Through this project, I learned:
 
 ✅ Modern Design
 
-✅ Easy User Interaction
+✅ Easy Navigation
 
 ✅ Fast Processing
 
@@ -117,9 +112,9 @@ Through this project, I learned:
 
 This Calculator is optimized for:
 
-- 💻 Desktop
-- 📱 Mobile
-- 📟 Tablet
+* 💻 Desktop
+* 📱 Mobile
+* 📟 Tablet
 
 ---
 
@@ -131,18 +126,18 @@ This Calculator is optimized for:
 
 Create a Calculator Interface using:
 
-- HTML
-- CSS
-- JavaScript
+* HTML
+* CSS
+* JavaScript
 
 With functionalities such as:
 
-- Addition
-- Subtraction
-- Multiplication
-- Division
-- Clear Button
-- Responsive Design
+* Addition
+* Subtraction
+* Multiplication
+* Division
+* Clear Screen
+* Responsive Design
 
 ---
 
@@ -152,7 +147,7 @@ With functionalities such as:
 
 Frontend Developer & BCA Student
 
-🔗 Live Project:  
+🔗 Live Project:
 https://codealpha-calculator-website.vercel.app/
 
 ---
@@ -168,4 +163,3 @@ Special thanks to **CodeAlpha** for providing this internship opportunity and he
 ### ⭐ If you like this project, please give it a Star ⭐
 
 </div>
-````
